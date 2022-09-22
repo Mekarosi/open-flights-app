@@ -13,7 +13,16 @@ module Api
       end 
 
 
-      
+       def destroy
+        review = Review.find(params[:id])
+
+        if review.destroy
+          header :no_content
+        else
+          render json: { error: review.errors.messages }, status: 422
+        end
+      end 
+
       private
 
       def review_params

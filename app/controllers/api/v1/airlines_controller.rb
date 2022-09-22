@@ -33,10 +33,10 @@ module Api
         end
       end
       
-      def destory
+      def destroy
       	airline = Airline.find_by(slug: params[:slug])
         
-        if airline.destory
+        if airline.destroy
         	head :no_content
         else
         	render json: { error: airline.errors.messages }, status: 422
