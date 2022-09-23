@@ -1,6 +1,7 @@
 module Api
   module V1
     class AirlinesController < ApplicationController
+      protect_from_forgery with: :null_session
       def index
         airlines = Airline.all
 
@@ -18,6 +19,7 @@ module Api
         
         if airline.save
         	render json: AirlineSerializer.new(airline).serializable_hash.to_json
+        else  
         	render json: { error: airline.errors.messages }, status: 422
         end
       end
@@ -45,7 +47,7 @@ module Api
       private
 
       def airline_params
-        params.require(:airline).permit(name, image_url)
+        params.require(:airline).permit(:name, :image_url)
       end
 
       def options
