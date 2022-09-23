@@ -81,8 +81,6 @@ GEM
       dotenv (= 2.8.1)
       railties (>= 3.2)
     erubi (1.11.0)
-    fast_jsonapi (1.5)
-      activesupport (>= 4.2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -96,6 +94,8 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jsonapi-serializer (2.2.0)
+      activesupport (>= 4.2)
     loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -196,9 +196,9 @@ DEPENDENCIES
   bootsnap
   debug
   dotenv-rails
-  fast_jsonapi
   importmap-rails
   jbuilder
+  jsonapi-serializer
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
