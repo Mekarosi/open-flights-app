@@ -3,7 +3,7 @@ databases:
     ipAllowList: []
 
 services:
-  - types: web
+  - type: web
     name: rails  
     env: ruby
     buildCommand: "./bin/render-build.sh"
