@@ -10,10 +10,10 @@ services:
     startCommand: bundle exec rails s
     envVars:
       - key: RAILS_MASTER_KEY
-        value: 76438892726262cb614bc90a8a5d990d
+        value: "76438892726262cb614bc90a8a5d990d"
         sync: false
       - key: DATABASE_URL
-        value: 
+        value: ""
         fromDasebase: 
           name: postgres
           property: connectionString
