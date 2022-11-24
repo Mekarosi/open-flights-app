@@ -9,12 +9,6 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: bundle exec rails s
     envVars:
-      - key: { 
-
-        RAILS_MASTER_KEY : 76438892726262cb614bc90a8a5d990d
-       
-       }
-        sync: false
       - key: DATABASE_URL
         fromDasebase: 
           name: postgres
